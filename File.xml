@@ -1,0 +1,32 @@
+<Employees>
+  <Day date="24-2-2017">
+    <employee id="2">
+      <in>9:41:38 PM</in>
+      <out>9:41:53 PM</out>
+      <Hours>16:0:15</Hours>
+    </employee>
+    <employee id="4">
+      <in>9:41:38 PM</in>
+      <out>9:41:53 PM</out>
+      <Hours>22:0:15</Hours>
+    </employee>
+    <employee id="5">
+      <in>9:41:38 PM</in>
+      <out>9:41:53 PM</out>
+      <Hours>9:0:15</Hours>
+    </employee>
+    <employee id="6">
+      <in>9:41:38 PM</in>
+      <out>9:41:53 PM</out>
+      <Hours>10:0:15</Hours>
+    </employee>
+    <employee id="7">
+      <in>9:42:22 PM</in>
+    </employee>
+  </Day>
+  <Day date="25-2-2017">
+    <employee id="2">
+      <in>8:45:14 PM</in>
+    </employee>
+  </Day>
+</Employees>

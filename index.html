@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Admin</title>
+    
+
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    
+
+
+    <script src="jquery-3.1.1.js"></script>
+    <link href="jquery.dataTables.css" rel="stylesheet" />
+    <link href="dataTables.bootstrap.css" rel="stylesheet" />
+    <script src="jquery.dataTables.js"></script>
+    <script src="jquery.flot.js"></script>
+    <script src="jquery.flot.categories.js"></script>
+    <script src="jquery.flot.time.js"></script>
+
+    <script src="JavaScript.js"></script>
+    <link href="mystyle.css" rel="stylesheet" />
+
+    <script>
+        $(function() {
+            $("#myTable").DataTable();
+            $("#myTable").DataTable();
+
+        });
+    </script>
+
+</head>
+<body>
+     
+      
+    <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo.png" />
+
+                    </a>
+
+                </div>
+
+                <span class="logout-spn">
+                    <a href="#" style="color:#fff;">LOGOUT</a>
+
+                </span>
+            </div>
+        </div>
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+
+
+                    <li class="active-link">
+                        <a href="#" id="CreateEmp"> <i class="fa fa-desktop "></i>Add New Employee <!--<span class="badge">Included</span>--></a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" id="Firstreport"><i class="fa fa-table "></i>Report1  <!---<span class="badge">Included</span>--></a>
+                    </li>
+                    <li>
+                        <a href="#" id="report2"><i class="fa fa-edit "></i>Report 2 <!--  <span class="badge">Included</span>--></a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Attendance System</h2>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="alert alert-info">
+                            <strong></strong> You Have No pending Task For Today.
+                        </div>
+
+                    </div>
+                </div>
+                <!-- All Here-->
+                <!--Here is my Attandace Code First -->
+
+                <form action="#" id="myform">
+                    <fieldset>
+                        <legend>Attandace</legend>
+
+                        <table>
+                            <tr>
+                                <td>Current Time </td>
+                                <td><input type="text"  disabled id="time" /> </td>
+                            </tr>
+                            <tr>
+                                <td> Select Employee</td>
+                                <td>
+                                    <select  id="emps"></select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Employee ID</td>
+                                <td><input type="number" id="Nemp" /></td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>
+                                    <select id="status">
+                                        <option value="1">attance</option>
+                                        <option value="0">Leave</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="button" value="Save" id="btn" class="btn btn-primary" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p id="Error"></p></td>
+                            </tr>
+                        </table>
+                    </fieldset>
+
+                    <div id="report1" name="slidwindow">
+                        <h2>Report 1</h2>
+                        <section id="Right">
+                            <ul>
+                                <li>
+
+                                    <label>
+                                        Select Date:
+                                        <input list="Dates" placeholder="Select Date" id="myDate" />
+                                    </label>
+                                    <datalist id="Dates"></datalist>
+                                </li>
+
+                                <li>
+                                    <table id="tbrep" cellpadding="5" border="1"></table>
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="Left">
+
+                        </section>
+                    </div>
+
+                    <div id="AddEmp" name="slidwindow">
+                        <h2>Create New Employee</h2>
+                        <ul>
+                            <li>
+                                <label for="Fname">Enter First Name : </label>
+                                <input type="text" name="Fname" />
+                            </li>
+
+                            <li>
+                                <label for="Mname">Enter Middel Name :</label>
+                                <input type="text" name="Mname" />
+                                </li>
+                                <li>
+                                    <label for="Lname">Enter Last Name :</label>
+                                    <input type="text" name="Lname" />
+                                </li>
+                                <li>
+                                    <label for="Bdate" >Enter BirthDate :</label>
+                                    <input type="date" name="Bdate" />
+                                </li>
+                                  <li>
+                                      <label for="Salary">Enter Salary :</label>
+                                      <input type="number" name="Salary" />
+                                  </li>
+                                   <li>
+                                        <label for="attTime">Enter attandance Time :</label>
+                                        <input type="time" name="attTime" />
+                                    </li>
+                                   <li>
+                                        <input type="submit" value="Save"  />
+                             
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <div class="footer">
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                &copy;  2014 yourdomain.com | Design by: <a href="http://binarytheme.com" style="color:#fff;" target="_blank">www.binarytheme.com</a>
+            </div>
+        </div>
+    </div>
+
+
+          
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <!--<script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>-->
+    
+   
+</body>
+</html>

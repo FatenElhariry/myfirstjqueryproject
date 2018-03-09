@@ -1,0 +1,120 @@
+﻿body {
+}
+ 
+         #myform {
+            border:1px solid lightcyan;
+            width:80%;
+            -webkit-box-shadow:lightcyan 10px 10px 10px;
+            height:70%;
+        }
+        #myform >input {
+            border-radius:10px;
+            outline:none;
+            width:50%;
+            margin:5px;
+
+        }
+        select {
+            width:50%;
+            padding:5px;
+            margin:5px;
+        }
+        #myform tr >td:nth-child(1) {
+            width:10%;
+            font-weight:bold;
+            text-indent:10px;
+        }
+       #myform td {
+            height:50px;
+        }
+       #myform  tr > td:first-child {
+            text-indent:10px;
+            width:30%;
+        }
+       
+       #myform td[colspan="2"] {
+            text-align:center;
+        }
+        input[type=button] {
+           margin:10px;
+            width:20%;
+            border:none;
+            
+        }
+       
+        input:focus {
+            border:2px solid lightcyan;
+        }
+      
+        #close {
+            position:absolute;
+            right:5px;
+            top:5px;
+        }
+        #close:hover{
+            border:5px solid orange;
+        }
+           
+      div[name="slidwindow"] {
+            background: #e3e3e3;
+            position: absolute;
+            height: 650px;
+            width: 65%;
+            resize:both;
+            overflow:auto;
+            margin: 10px auto;
+            padding:20px;
+            font-family: sans-serif;
+            z-index:2;
+        }
+
+      .js{
+            position: relative;
+            top: 70px;
+            width: 600px;
+            display: none;
+        }
+
+        div[name="slidwindow"]  h2 {
+            margin-top: 0;
+        }
+
+        div[name="slidwindow"]  ul {
+            padding: 0;
+        }
+         div[name="slidwindow"]  table {
+            width:90%;
+        }
+
+        div[name="slidwindow"]  li {
+            list-style: none;
+            margin-bottom: 1em;
+        }
+
+        /* Close button on form */
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-weight: bold;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+         /* Form inputs */
+        #report1 #myDate, #Dates {
+            width: 100%;
+            line-height: 2em;
+        }
+        #AddEmp input, textarea { width: 100%; line-height: 2em;}
+	   #AddEmp input[type=submit] { width: auto;  }
+
+        
+        label {
+            display: block;
+            text-align: left;
+        }
+
+#Left {
+    width:600px;
+    height:300px;
+}
